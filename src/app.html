@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+		<script>
+			tailwind.config = {
+				content: ["./src/**/*.{html,js,svelte}"],
+			  theme: {
+				extend: {
+				  colors: {
+					clifford: '#da373d',
+				  }
+				}
+			  }
+			}
+		  </script>
+		<style type="text/tailwindcss">
+			@layer utilities {
+			  .content-auto {
+				content-visibility: auto;
+			  }
+			}
+		  </style>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover" class="dark:bg-gray-100">
+		<div style="display: contents" class="dark:bg-black">%sveltekit.body%</div>
+	</body>
+</html>
